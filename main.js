@@ -8,7 +8,7 @@ export function findIndex(word, array) {
   const wordLength = word.length;
   let i = 0;
   while (i <= array.length - wordLength) {
-    if (array.slice(i, i + wordLength).join("") === word) {
+    if (array[i] === word[0] && array.slice(i, i + wordLength).join("") === word) {
       return i;
     }
 
